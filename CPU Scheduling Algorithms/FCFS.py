@@ -1,14 +1,13 @@
 #Read the inputs from user
-PROCESSES = []
+processes = []
 n = int(input("Enter no. of processes : "))
 for i in range(n):
     name = input("Enter process name : ")
     at = int(input("Enter process arrival time : "))
     bt = int(input("Enter process burst time : "))
-    PROCESSES.append({"name":name, "at":at, "bt":bt})
+    processes.append({"name":name, "at":at, "bt":bt})
 
 #Apply the algorithm
-processes = list(PROCESSES)
 processes.sort(key=lambda P: P['at'])
 curr_time = 0
 for process in processes :
